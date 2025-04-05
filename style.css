@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "main main aside"
+    "containerprojetos containerprojetos containerprojetos"
+    "footer footer footer";
+
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-rows: 50px 200px 460px 20px;
+    gap: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    grid-area: header;
+    background-color: rgb(2, 0, 27);  
+    color: white;
+    
+    padding: 0 20px;
+}
+
+nav {
+    display: flex;
+    gap: 15px; 
+}
+
+header a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: text-decoration 1s ease-in-out; 
+}
+
+header a:hover {
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+header p {
+    font-size: 50px;
+}
+
+main {grid-area: main;
+    background-color: rgb(2, 0, 27);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    border-radius: 0px 30px 30px 0px
+}
+
+.destaque {
+    font-size: 30px;
+    color: royalblue;
+    font-weight: bold;
+}
+
+.logolin{
+    width: 80px;
+    height: 80px;
+}
+
+.logolin:hover {
+    transform: scale(1.1);
+}
+
+aside {grid-area: aside;
+    color: rgb(2, 0, 27);
+}
+
+.containerprojetos {grid-area: containerprojetos;
+    gap: 20px;
+    background-color: rgb(2, 0, 27);
+    color: white;
+}
+
+
+.murilo {
+    
+    width: 170px;
+    height: 170px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8); 
+}
+
+p {
+    color: white; 
+    
+    font-size: 24px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    text-shadow: 0px 0px 10px rgb(2, 0, 27);
+}
+
+.gradeprojetos {
+    display: grid;
+    grid-template-areas: 
+    "projeto1 projeto2 projeto3";
+    
+    padding: 20px;
+    margin: 20px;
+    gap: 20px;
+}
+
+.projetos {
+    box-shadow: 0px 0px 10px white;
+    height: 300px;
+    width: 400px;
+}
+
+.projetos:hover {
+    transform: scale(1.1);
+}
+
+
+
+footer {
+    grid-area: footer;
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+footer h1 {
+    color: rgb(0, 0, 0);
+    text-shadow: none;
+    font-size: 30px;
+}
+
+footer p {
+    display: flex;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+footer a {
+    color: royalblue;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
