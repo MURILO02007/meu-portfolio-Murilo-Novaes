@@ -11,14 +11,14 @@
         <header>
             <p>Portfolio</p>
 
-            
+            <button onclick="mudarcor()">Troca de cor</button>
         </header>
 
         <main>
             <p>
             <span class="destaque">Sobre Mim:</span> <br>
-            Meu nome é Murilo Novaes Gama, 18 anos, sou de Salvador, Bahia. <br>
-            Desenvolvedor front-end com experiência em HTML, CSS e JavaScripit. <br>
+            Meu nome é Murilo Novaes Gama, 18 anos, sou de salvador bahia. <br>
+            Desenvolvedor front-end com experiencia em HTML, CSS e JavaScripit. <br>
             Estou sempre buscando aprender mais e me aprimorar na área da tecnologia. <br>
             Atualmente estudando na faculdade de Engenharia de software na UniJorge.
             </p>
@@ -40,7 +40,7 @@
                 <img class="projetos" src="Capturar.PNG" alt="">
                 <img class="projetos" src="projeto3.PNG" alt="">
 
-                <h4>Trabalho da faculdade, com o intuito de criar um site de    organização de eventos com palestras.</h4>
+                <h4>Trabalho da Faculdade, com o intuito de criar um site de    organização de eventos com palestras.</h4>
 
                 <h4>Trabalho voluntario, de um site ficticio de venda de fones, (ainda em desenvolvimento)</h4>
 
@@ -57,5 +57,11 @@
         </footer>
 
     </div>
+
+    <script>
+        function mudarcor() {
+            document.body.classList.toggle("darck-mode")
+        }
+    </script>
 </body>
 </html>
