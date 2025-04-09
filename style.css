@@ -8,23 +8,11 @@ body {
     background-color: rgb(0, 0, 0);
 }
 
-.container {
-    display: grid;
-    grid-template-areas:
-    "header header header"
-    "main main aside"
-    "containerprojetos containerprojetos containerprojetos"
-    "footer footer footer";
 
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    grid-template-rows: 50px 200px 460px 20px;
-    gap: 20px;
-}
 
 header {
     display: flex;
     justify-content: space-between;
-    grid-area: header;
     background-color: rgb(0, 0, 0);  
     color: white;
     
@@ -54,14 +42,14 @@ header p {
     font-size: 50px;
 }
 
-main {grid-area: main;
+
+main {
     background-color: rgb(0, 0, 0);
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 30px;
-    border-radius: 0px 30px 30px 0px
 }
 
 .destaque {
@@ -80,22 +68,38 @@ main {grid-area: main;
 }
 
 aside {
-    grid-area: aside;
+    background-color: rgb(0, 0, 0);
+    height: 300px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     color: rgb(255, 255, 255);
 }
 
-.containerprojetos {grid-area: containerprojetos;
+
+.meunome{
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: royalblue;
+}
+
+.murilo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8); 
+}
+
+.containerprojetos {
     gap: 20px;
     background-color: rgb(0, 0, 0);
     color: white;
-}
-
-
-.murilo {
-    width: 170px;
-    height: 170px;
-    border-radius: 100%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8); 
 }
 
 p {
@@ -113,16 +117,20 @@ h1 {
     display: grid;
     grid-template-areas: 
     "projeto1 projeto2 projeto3";
-    
+
+    gap: 20px;
     padding: 20px;
     margin: 20px;
-    gap: 20px;
 }
 
 .projetos {
+    width: 100%;
+    max-width: 400px;   
+    height: auto;       
     box-shadow: 0px 0px 10px white;
-    height: 300px;
-    width: 400px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    box-shadow: 0px 0px 10px white;
 }
 
 .projetos:hover {
@@ -132,9 +140,7 @@ h1 {
 
 
 footer {
-    grid-area: footer;
     color: rgb(0, 0, 0);
-    text-shadow: 0px 0px 10px rgb(255, 255, 255);
     font-size: 20px;
 }
 
@@ -164,7 +170,7 @@ footer a:hover {
 
 button{
     height: 40px;
-    background-color: rgb(17, 0, 255);
+    background-color: royalblue;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -179,7 +185,7 @@ header button{
 }
 
 button:hover {
-    background-color: royalblue;
+    background-color: rgb(34, 71, 182);
 }
 
 .darck-mode .container
@@ -190,6 +196,9 @@ button:hover {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
 }
+.darck-mode .container {
+    background-color: rgb(255, 255, 255);
+}
 
 .darck-mode main{
     background-color: rgb(255, 255, 255);
@@ -197,12 +206,12 @@ button:hover {
 }
 
 .darck-mode aside {
-    color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
 }
 
 .darck-mode footer p,
 .darck-mode footer h1 {
-    color: white;
+    color: rgb(0, 0, 0);
     text-shadow: none;
 }
 
@@ -211,7 +220,7 @@ button:hover {
 }
 
 .darck-mode .destaque {
-    color: rgb(0, 7, 65);
+    color: royalblue;
 }
 
 .darck-mode main p{
@@ -223,17 +232,12 @@ button:hover {
 }
 
 .darck-mode aside h1 {
-    color: #000;
+    color: royalblue;
 }
 
-.darck-mode footer h1{
-    color: black;
-}
-
-.darck-mode footer p {
-    color: black;
-}
-
-.darck-mode {
-    background-color: rgb(255, 255, 255);
+@media (max-width: 500px) {
+    main {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
